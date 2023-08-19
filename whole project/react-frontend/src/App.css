@@ -1,0 +1,124 @@
+*{
+  font-family: Bricolage Grotesque;
+  box-sizing: border-box;
+}
+body{
+  background-color: gainsboro;
+}
+.header{
+  background-color: bisque;
+}
+.navbar{
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.logo{
+  color: red;
+  font-size: 25px;
+}
+.forlogin{
+  position : absolute;
+  top : 0 px;
+  left : 85%;
+  font-size: 25px;
+}
+.forreg{
+  position : absolute;
+  top : 0 px;
+  left : 93%;
+  font-size: 25px;
+}
+
+ul li{
+  display: inline;
+  list-style: none;
+}
+.forsearch{
+  background-color:blanchedalmond;
+}
+.searchcontainer{
+  float: right;
+  display: flex;
+}
+.forsearch input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 3px;
+  font-size: 17px;
+}
+.forsearch button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.body{
+  background-color:blanchedalmond;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 130px; /* space between columns, change as needed */
+  grid-row-gap: 10px; /* space between rows, change as needed */
+}
+
+.pdlist{
+  background-color: red;
+  width: fit-content;
+  padding: 20px;
+  margin: 20px;
+}
+
+.pdimage{
+  width: 200px;
+  height: 180px;
+}
+.footer{
+  text-align: center;
+  width: 100%;
+  bottom:0;
+  background-color: beige;
+}
+.footer p{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.loginform{
+  background-color: greenyellow;
+  width: auto;
+  padding: 50px;
+  height: 100vh;
+}
+.innerloginform{
+  background-color: orange;
+  width: min-content;
+  padding: 20px;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  position: absolute; /*Can also be `fixed`*/
+  left: 0;
+  right: 0;
+  top: 30%;
+  margin: auto;
+}
+.innerloginform input,button{
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.cartbutton button{
+  position: absolute;
+background-color:aquamarine;
+border-radius: 0.5rem;
+margin-top: -12px;
+margin-left: -12px;
+}

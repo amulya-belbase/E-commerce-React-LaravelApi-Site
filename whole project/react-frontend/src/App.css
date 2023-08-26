@@ -1,124 +1,866 @@
-*{
+* {
   font-family: Bricolage Grotesque;
   box-sizing: border-box;
 }
-body{
-  background-color: gainsboro;
+
+body {
+  background-color: #e2e2e2;
 }
-.header{
-  background-color: bisque;
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #00636E;
+  padding: 5px;
+  z-index: 1;
 }
-.navbar{
-  margin-top: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+.navbar {
+  display: flex;
 }
-.logo{
-  color: red;
-  font-size: 25px;
-}
-.forlogin{
-  position : absolute;
-  top : 0 px;
-  left : 85%;
-  font-size: 25px;
-}
-.forreg{
-  position : absolute;
-  top : 0 px;
-  left : 93%;
+
+.logo {
+  color: white;
   font-size: 25px;
 }
 
-ul li{
+.nav {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  left: 85%;
+  font-size: 25px;
+  text-decoration: none;
+  background-color: #0091A1;
+  padding: 10px;
+  margin-top: -10px;
+  border-radius: 0.5rem;
+}
+
+.nav a,
+i {
+  text-decoration: none;
+  color: white;
+}
+
+.logname:hover .dropdown-item,
+.logname:focus-within .dropdown-item.bodybuttons,
+.logname:active .dropdown-item.bodybuttons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  margin-left: 8px;
+  background-color: #0091A1;
+  padding: 7px;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: #00636E;
+}
+
+.bodybuttons {
+  display: flex;
+  margin: 5px;
+  border-radius: 0.5rem;
+}
+
+.bodybuttons button {
+  border-radius: 0.5rem;
+  font-size: 20px;
+  cursor: pointer;
+  background: #0091A1;
+  color: white;
+  margin-left: 5px;
+  padding: 10px;
+  border: 1px solid #00636E;
+}
+
+.bodybuttons button:hover {
+  background: #00636E;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.fa-solid {
+  margin-right: 7px;
+  font-size: 18px;
+}
+
+ul li {
   display: inline;
   list-style: none;
+  text-decoration: none;
 }
-.forsearch{
-  background-color:blanchedalmond;
-}
-.searchcontainer{
+
+.searchcontainer {
   float: right;
   display: flex;
+  margin-top: -59px;
+  align-items: center;
 }
+
+.searchcontainer i {
+  position: relative;
+  color: black;
+  left: -9px;
+}
+
+
 .forsearch input[type=text] {
   float: right;
-  padding: 6px;
+  position: relative;
+  right: -18px;
+  padding: 8px;
   border: none;
   margin-top: 8px;
   margin-right: 3px;
-  font-size: 17px;
+  margin-left: 20px;
+  font-size: 25px;
+  border-radius: 0.5rem;
 }
-.forsearch button {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 0;
-}
-.body{
-  background-color:blanchedalmond;
+
+.allproducts {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-top: 0px;
   padding: 20px;
+}
+
+.allpdheader {
+  display: flex;
+  position: relative;
+  align-items: center;
+  position: relative;
+  border-radius: 0.5rem;
+  border-bottom: 5px solid #00636E;
+
+}
+
+.allpd {
+  border-radius: 0.5rem;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 30px;
+  margin-top: 0;
+  font-weight: 600;
+  color: black;
+}
+
+.cartbutton {
+  position: absolute;
+  right: 0;
+}
+
+.cartbutton button {
+  float: right;
+  background-color: #0091A1;
+  border-radius: 0.5rem;
+  color: white;
+  border: 1px solid #00636E;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.cartbutton button:hover {
+  cursor: pointer;
+  background: #00636E;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.cartbutton i {
+  font-size: 20px;
+}
+
+
+/* PRODUCTS DISPLAY */
+
+.productbody {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 0.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 130px; /* space between columns, change as needed */
-  grid-row-gap: 10px; /* space between rows, change as needed */
+  grid-column-gap: 20px;
+  /* space between columns, change as needed */
+  grid-row-gap: 10px;
+  /* space between rows, change as needed */
 }
 
-.pdlist{
-  background-color: red;
+.pdlist {
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  align-items: center;
   width: fit-content;
+  /* height: fit-content; */
   padding: 20px;
   margin: 20px;
+  border-radius: 0.5rem;
+  box-shadow: -1px 0px 34px 2px rgba(0, 0, 0, 0.82);
+
 }
 
-.pdimage{
+.pdimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   width: 200px;
   height: 180px;
+  border-radius: 0.5rem;
 }
-.footer{
+
+.pdimage:hover {
+  width: 220px;
+  height: 200px;
+  cursor: pointer;
+}
+
+
+.productcard h2 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.productdetails {
+  display: flex;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.leftdetails {
+  font-size: 20px;
+  width: 150px;
+  border-right: 2px solid #00636E;
+  padding-right: 10px;
+  overflow-wrap: break-word;
+}
+
+.rightdetails {
+  font-size: 20px;
+  width: 150px;
+  padding-left: 10px;
+}
+
+.pdbutton {
   text-align: center;
   width: 100%;
-  bottom:0;
-  background-color: beige;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-.footer p{
+
+.pdbutton button {
+  background-color: #0091A1;
+  border-radius: 0.5rem;
+  color: white;
+  border: 1px solid #00636E;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.pdbutton button:hover {
+  cursor: pointer;
+  background: #00636E;
+  color: #fff;
+  transition: 0.5s;
+  transform: scale(1.02);
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  background-color: #00636E;
+  padding: 5px;
+  color: white;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.footer p {
   margin-top: 0;
   margin-bottom: 0;
   padding: 10px;
 }
-.loginform{
-  background-color: greenyellow;
+
+
+/* FOR MYPRODUCTS PAGE */
+
+.myproductsbody {
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 10px;
+  margin-top: 0px;
+  padding: 20px;
+}
+
+.mypdheader p {
+  width: 100%;
+  border-radius: 0.5rem;
+  border-bottom: 5px solid #00636E;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: black;
+}
+
+.prodelements {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mypdlist {
+  display: flex;
+  width: fit-content;
+  background-color: white;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.83);
+}
+
+.mypdimage {
+  height: 200px;
+  width: 220px;
+}
+
+.mypdimage {
+  margin-left: 20px;
+}
+
+.mypddetails {
+  margin-left: 50px;
+}
+
+.mypdactions {
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.editbutton {
+  margin-right: 10px;
+  background-color: #0091A1;
+  border-radius: 0.5rem;
+  color: white;
+  border: 1px solid #00636E;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.editbutton:hover {
+  cursor: pointer;
+  background: #00636E;
+  color: #fff;
+  transition: 0.5s;
+  transform: scale(1.02);
+}
+
+.deletebutton {
+  background-color: #E60000;
+  border-radius: 0.5rem;
+  color: white;
+  border: 1px solid #E60000;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.deletebutton:hover {
+  cursor: pointer;
+  background-color: #BF0000;
+  transition: 0.5s;
+  transform: scale(1.02);
+}
+
+/* FOR ADDING PRODUCTS */
+
+.formbody {
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 10px;
+}
+
+.addproductheader {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px;
+  padding-bottom: 5px;
+  border-bottom: 5px solid #00636E;
+  border-radius: 0.5rem;
+}
+
+.togoback {
+  width: 5%;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.togoback a {
+  text-decoration: none;
+}
+
+.formdiv {
+  /* background-color: green; */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.formdiv form {
+  background-color: white;
+  box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.83);
+  padding: 20px;
+  border-radius: 0.5rem;
+}
+
+.addpdheader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #00636E;
+}
+
+form label {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+input[type=text],
+textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  resize: vertical;
+  color: black;
+}
+
+.imagepart {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.imagepart input {
+  margin-left: 20px;
+  color: gray;
+}
+
+form button {
+  background-color: #0091A1;
+  border-radius: 0.5rem;
+  color: white;
+  border: 1px solid #00636E;
+  padding: 10px;
+  font-size: 20px;
+}
+
+form button:hover {
+  cursor: pointer;
+  background: #00636E;
+  color: #fff;
+  transition: 0.5s;
+  transform: scale(1.02);
+}
+
+
+/* FOR CART PART */
+
+
+.mycartdetails {
+  /* border-right: 2px solid #00636E; */
+  margin-right: 20px;
+  padding-right: 20px;
+
+}
+
+.mycartaction {
+  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fornumber {
+  display: flex;
+  justify-content: center;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.minus,
+.plus {
+  background: #f2f2f2;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px 0 10px;
+  font-size: 25px;
+}
+
+.minus,
+.plus:hover {
+  cursor: pointer;
+}
+
+.number input {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  align-items: center;
+  text-align: center;
+  font-size: 26px;
+  width: 60px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.grandtotalcart {
+  margin-top: 10px;
+  padding: 10px;
+  padding-top: 15px;
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #00636E;
+}
+
+.checkoutbutton {
+  display: flex;
+  justify-content: center;
+}
+
+.checkoutbutton button {
+  background-color: #0091A1;
+  border-radius: 0.5rem;
+  color: white;
+  border: 1px solid #00636E;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.checkoutbutton button:hover {
+  cursor: pointer;
+  background: #00636E;
+  color: #fff;
+  transition: 0.5s;
+  transform: scale(1.02);
+}
+
+
+/* FOR LOGIN/REGISTRATION */
+
+.logindiv,
+.regdiv {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.logindiv:hover,
+.regdiv:hover {
+  background-color: #0091A1;
+  border-radius: 0.5rem;
+}
+
+.forlogin {
+  position: absolute;
+  top: 0 px;
+  left: 80%;
+  font-size: 25px;
+  color: white;
+}
+
+.forlogin span {
+  color: white;
+  text-decoration: none;
+}
+
+.forreg span {
+  color: white;
+  text-decoration: white;
+}
+
+.forlogin a {
+  text-decoration: none;
+}
+
+.forreg a {
+  text-decoration: none;
+}
+
+.forreg {
+  position: absolute;
+  top: 0 px;
+  left: 90%;
+  font-size: 25px;
+  color: white;
+}
+
+.loginform {
+  background-image: url("../public/images/online-shopping.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  /* Center the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
   width: auto;
   padding: 50px;
   height: 100vh;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
-.innerloginform{
-  background-color: orange;
+
+.innerloginform {
+  background-color: white;
   width: min-content;
-  padding: 20px;
   border-radius: 0.5rem;
   font-size: 20px;
-  position: absolute; /*Can also be `fixed`*/
+  position: absolute;
   left: 0;
   right: 0;
-  top: 30%;
+  top: 20%;
   margin: auto;
+  color: white;
 }
-.innerloginform input,button{
+
+.displayform {
+  background-color: #00636E;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+.displayform h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.actualform {
+  padding-top: 30px;
+  margin: 30px;
+  margin-top: 5px;
+}
+
+.inputdiv {
+  width: 100%;
+}
+
+.inputdiv input {
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid gray;
+}
+
+.inputdiv button {
+  background-color: #00636E;
+  width: 100%;
+  padding: 15px;
+  border-radius: 2rem;
+  font-size: 20px;
+}
+
+.inputdiv button:hover {
+  background-color: #0091A1;
+}
+
+.loginbelow {
+  text-align: center;
+  color: gray;
+  padding-top: 20px;
+}
+
+.loginbelow p {
+  margin-top: 0px;
+}
+
+.loginbelow a {
+  text-decoration: none;
+  color: #00636E
+}
+
+.loginbelow a:hover {
+  color: #0091A1;
+}
+
+
+/* REGISTRATION FORM */
+
+.registration {
+  position: relative;
+}
+
+.registrationback {
+  background-image: url("../public/images/ecommerce.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  width: auto;
+  padding: 50px;
+  height: 100vh;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.registrationcontent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+  margin: auto;
+  width: fit-content;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+}
+
+.regheader {
+  background-color: #00636E;
+  width: 100%;
+  margin-top: 0px;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.regheader h2 {
+  margin-top: 0px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.regheader p {
+  margin-top: 0px;
+  padding-bottom: 10px;
+}
+
+.registrationcontent form {
+  padding: 30px;
+  padding-bottom: 20px;
+  margin: 20px;
+  padding-top: 5px;
+  margin-bottom: 0;
+}
+
+.registrationcontent form input {
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid gray;
+}
+
+.registrationcontent form input[type="email"],
+.registrationcontent form input[type="password"],
+.registrationcontent form input[type="text"] {
+  margin-bottom: 0px;
+}
+
+.registrationcontent form button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #00636E;
+  padding: 15px;
+  border-radius: 2rem;
+  font-size: 20px;
+}
+
+.registrationcontent form button:hover {
+  background-color: #0091A1;
+}
+
+.regbelow {
+  text-align: center;
+  color: gray;
+  padding-bottom: 10px;
+}
+
+.regbelow p {
+  margin-top: 0px;
+}
+
+.regbelow a {
+  text-decoration: none;
+  color: #00636E
+}
+
+.regbelow a:hover {
+  color: #0091A1;
+}
+
+.removebutton {
+  background-color: #E60000;
+  border-radius: 0.5rem;
+  color: white;
+  border: 1px solid #E60000;
   padding: 10px;
   font-size: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-right: 10px;
 }
-.cartbutton button{
-  position: absolute;
-background-color:aquamarine;
-border-radius: 0.5rem;
-margin-top: -12px;
-margin-left: -12px;
+
+.removebutton:hover {
+  cursor: pointer;
+  background-color: #BF0000;
+  transition: 0.5s;
+  transform: scale(1.02);
 }

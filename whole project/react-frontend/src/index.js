@@ -10,6 +10,7 @@ import Update from './components/update';
 import MyProducts from './components/myproducts';
 import reportWebVitals from './reportWebVitals';
 import Cart from './components/cart';
+import { CartProvider } from './components/cartcontext';
 
 import {
   createBrowserRouter,
@@ -50,7 +51,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <CartProvider>
     <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>
 );
 

@@ -36,19 +36,27 @@ export default function Body() {
     <div>
       <div className="bodybuttons">
         <Link to="/">
-          <button>All Products</button>
+          <div>
+        
+          <button><i class="fa-solid fa-server"></i>All Products</button>
+          </div>
         </Link>
 
         {localStorage.getItem("vendor-info") ? (
           <Link to="/myproducts">
-            <button>My Products</button>
+            <div>
+            
+            <button><i class="fa-solid fa-box-open"></i>My Products</button>
+            </div>
+            
           </Link>
         ) : (
           <div></div>
         )}
         {localStorage.getItem("vendor-info") ? (
           <Link to="/addproduct">
-            <button>Add Product</button>
+            
+            <button><i class="fa-solid fa-square-plus"></i>Add Product</button>
           </Link>
         ) : (
           <div></div>
@@ -64,12 +72,11 @@ export default function Body() {
             onChange={(event) => setInputValue(event.target.value)}
             placeholder="Search for Products..."
           />
+          <i class="fa-solid fa-magnifying-glass"></i>
           {/* <button type="submit" onClick={handleCart}>Cart {cartValue}</button> */}
         </div>
-        <div className="body">
           {inputValue ? <Search data={inputValue} /> : <AllProducts />}
          
-        </div>
       </div>
     </div>
   );
